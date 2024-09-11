@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="Scripts/enviar-config.js" defer></script>
     <script src="Scripts/cambio-de-perfiles.js" defer></script>
+    <script src="Scripts/dibujar.js" defer></script>
+    <script src="Scripts/color-picker.js" defer></script>
     <title>NeoDrfit</title>
 </head>
 <body>
@@ -19,8 +21,8 @@
             <p class="perfil" id="3">Perfil 3</p>
         </ul>
     </nav>
-    <main>
-        <section class="led-container">
+    <main class="main">
+        <section class="led-container" id="led-container">
             <div class="led" id="div-1"></div>
             <div class="led" id="div-2"></div>
             <div class="led" id="div-3"></div>
@@ -86,13 +88,25 @@
             <div class="led" id="div-63"></div>
             <div class="led" id="div-64"></div>
         </section>
-        <section class="form-enviar">
-            <form id="enviar-config">
-                <h2>Enviar configuración de los leds</h2>
-                <input type="submit" class="enviar" id="boton-enviar">
-            </form>
-        </section>
+        <div class="right-side">
+            <aside class="aside">
+                <div class="color-picker-container">
+                    <input type="color" id="color-picker">
+                    <div id="color-values">
+                        <span id="hex-value">Hex: #000000</span><br>
+                        <span id="rgb-value">RGB: 0, 0, 0</span><br>
+                        <span id="hsl-value">HSL: 0, 0, 0</span>
+                    </div>
+                    <button class="reset-button" id="reset-button">Resetear</button>
+                </div>
+            </aside>
+            <aside class="form-enviar">
+                <form id="enviar-config">
+                    <h2>Enviar configuración de los leds</h2>
+                    <input type="submit" class="enviar" id="boton-enviar">
+                </form>
+            </aside>
+        </div>
     </main>
-    <aside class="aside">asd</aside>
 </body>
 </html>
