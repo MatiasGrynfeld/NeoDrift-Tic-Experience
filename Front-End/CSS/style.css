@@ -1,0 +1,47 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+.led{
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 50%;
+}
+.led-container{
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    background-color: aqua;
+}
+.navbar{
+    background-color: #333;
+    display: flex;
+    color: #fff;
+    height: 50px;
+}
+.title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+.perfil-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 3;
+}
+.title{
+    text-align: center;
+}
+.perfil{
+    margin: 0 10px;
+    text-decoration: #fff underline 2px solid;
+}
+.aside{
+    background-color: crimson;
+}
