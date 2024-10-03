@@ -1,0 +1,36 @@
+.navbar {
+    background-color: #333;
+    display: flex;
+    color: #fff;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.perfil-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 3;
+}
+
+.title {
+    text-align: center;
+    cursor: pointer;
+}
+
+.perfil {
+    margin: 0 10px;
+    text-decoration: #fff underline 2px solid;
+    cursor: pointer;
+}
