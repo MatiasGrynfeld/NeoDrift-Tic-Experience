@@ -1,8 +1,3 @@
-const title = document.getElementById('title');
-title.addEventListener('click', () => {
-    location.reload();
-});
-
 let perfil = "1";
 let listeners = {};
 cambiarPerfil(perfil);

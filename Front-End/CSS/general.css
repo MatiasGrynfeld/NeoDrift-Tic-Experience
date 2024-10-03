@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -5,22 +9,27 @@ html, body {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
+    background-color: #0d1739;
     margin: 0;
     padding: 0;
     padding-top: 50px;
 }
 
 .main {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.personalizacion{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    height: calc(100vh - 50px);
-    background-color: cadetblue;
+    max-height: 100%;
+    gap: 20px;
 }
 
 .right-side {
     display: flex;
     flex-direction: column;
     height: 100%;
-    background-color: aquamarine;
 }

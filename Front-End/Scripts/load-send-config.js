@@ -1,7 +1,7 @@
 let ws;
 
 window.onload = function() {
-    ws = new WebSocket("wss://example.com/ws");
+    ws = new WebSocket("ws://127.0.0.1:8000/ws/1");
     ws.onopen = function() {
         console.log("Connected to WebSocket");
     };
@@ -22,8 +22,11 @@ btn_enviar.addEventListener('click', sendMessage);
 function sendMessage(event) {
     event.preventDefault();
     let input = colores[perfil];
+    console.log(input);
     if (ws.readyState === WebSocket.OPEN) {
+        console.log("Se puede mandar")
         ws.send(JSON.stringify(input));
+        console.log("Mensaje enviado");
     } else {
         console.log("WebSocket is not connected.");
     }

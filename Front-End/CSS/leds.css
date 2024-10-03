@@ -1,15 +1,14 @@
 .led-container {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    gap: 1px;
-    justify-items: stretch;
-    align-items: stretch;
-    padding: 20px;
+    background-color: #0E2A47;
+    margin: 20px;
+    border-radius: 10px;
+    max-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: 100%;
+    padding: 10px;
     box-sizing: border-box;
-    background-color: aqua;
     cursor: url('../Resources/9040300_paint_bucket_icon.svg') 16 16, auto;
 }
 
@@ -17,5 +16,7 @@
     background-color: #FFF;
     border-radius: 50%;
     box-sizing: border-box;
-    aspect-ratio: 1 / 1;
+    margin: 0.5px;
+    width: calc(100% / 8 - 1px); /* Calculo para que encajen 8 LEDs */
+    height: calc(100% / 8 - 1px); /* Calculo para que encajen 8 LEDs */
 }

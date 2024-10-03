@@ -1,13 +1,33 @@
 .form-enviar {
+    background-color: #9290C3;
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     margin: 20px;
     border-radius: 10px;
-    background-color: burlywood;
+}
+
+.boton-enviar {
+    display: block;
+    width: 200px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #0e2a47;
+    border: solid 1px transparent;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+    margin: auto;
+}
+
+.boton-enviar:hover {
+    background-color: transparent;
+    border-color: #fff;
+    transition: all .1s ease-in-out;
 }
