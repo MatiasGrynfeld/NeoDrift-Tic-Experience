@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="Scripts/enviar-config.js" defer></script>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/leds.css">
+    <link rel="stylesheet" href="css/color-picker.css">
+    <link rel="stylesheet" href="css/enviar.css">
+    <script src="Scripts/load-send-config.js" defer></script>
     <script src="Scripts/cambio-de-perfiles.js" defer></script>
     <script src="Scripts/dibujar.js" defer></script>
     <script src="Scripts/color-picker.js" defer></script>
@@ -14,7 +18,7 @@
     <main class="main">
         <nav class="navbar">
             <div class="title-container">
-                <h1 class="title">NeoDrfit</h1>
+                <h1 class="title" id="title">NeoDrfit</h1>
             </div>
             <ul class="perfil-container">
                 <p class="perfil" id="1">Perfil 1</p>
@@ -23,70 +27,70 @@
             </ul>
         </nav>
         <section class="led-container" id="led-container">
-            <div class="led" id="div-1"></div>
-            <div class="led" id="div-2"></div>
-            <div class="led" id="div-3"></div>
-            <div class="led" id="div-4"></div>
-            <div class="led" id="div-5"></div>
-            <div class="led" id="div-6"></div>
-            <div class="led" id="div-7"></div>
-            <div class="led" id="div-8"></div>
-            <div class="led" id="div-9"></div>
-            <div class="led" id="div-10"></div>
-            <div class="led" id="div-11"></div>
-            <div class="led" id="div-12"></div>
-            <div class="led" id="div-13"></div>
-            <div class="led" id="div-14"></div>
-            <div class="led" id="div-15"></div>
-            <div class="led" id="div-16"></div>
-            <div class="led" id="div-17"></div>
-            <div class="led" id="div-18"></div>
-            <div class="led" id="div-19"></div>
-            <div class="led" id="div-20"></div>
-            <div class="led" id="div-21"></div>
-            <div class="led" id="div-22"></div>
-            <div class="led" id="div-23"></div>
-            <div class="led" id="div-24"></div>
-            <div class="led" id="div-25"></div>
-            <div class="led" id="div-26"></div>
-            <div class="led" id="div-27"></div>
-            <div class="led" id="div-28"></div>
-            <div class="led" id="div-29"></div>
-            <div class="led" id="div-30"></div>
-            <div class="led" id="div-31"></div>
-            <div class="led" id="div-32"></div>
-            <div class="led" id="div-33"></div>
-            <div class="led" id="div-34"></div>
-            <div class="led" id="div-35"></div>
-            <div class="led" id="div-36"></div>
-            <div class="led" id="div-37"></div>
-            <div class="led" id="div-38"></div>
-            <div class="led" id="div-39"></div>
-            <div class="led" id="div-40"></div>
-            <div class="led" id="div-41"></div>
-            <div class="led" id="div-42"></div>
-            <div class="led" id="div-43"></div>
-            <div class="led" id="div-44"></div>
-            <div class="led" id="div-45"></div>
-            <div class="led" id="div-46"></div>
-            <div class="led" id="div-47"></div>
-            <div class="led" id="div-48"></div>
-            <div class="led" id="div-49"></div>
-            <div class="led" id="div-50"></div>
-            <div class="led" id="div-51"></div>
-            <div class="led" id="div-52"></div>
-            <div class="led" id="div-53"></div>
-            <div class="led" id="div-54"></div>
-            <div class="led" id="div-55"></div>
-            <div class="led" id="div-56"></div>
-            <div class="led" id="div-57"></div>
-            <div class="led" id="div-58"></div>
-            <div class="led" id="div-59"></div>
-            <div class="led" id="div-60"></div>
-            <div class="led" id="div-61"></div>
-            <div class="led" id="div-62"></div>
-            <div class="led" id="div-63"></div>
-            <div class="led" id="div-64"></div>
+            <div class="led" id="led1"></div>
+            <div class="led" id="led2"></div>
+            <div class="led" id="led3"></div>
+            <div class="led" id="led4"></div>
+            <div class="led" id="led5"></div>
+            <div class="led" id="led6"></div>
+            <div class="led" id="led7"></div>
+            <div class="led" id="led8"></div>
+            <div class="led" id="led9"></div>
+            <div class="led" id="led10"></div>
+            <div class="led" id="led11"></div>
+            <div class="led" id="led12"></div>
+            <div class="led" id="led13"></div>
+            <div class="led" id="led14"></div>
+            <div class="led" id="led15"></div>
+            <div class="led" id="led16"></div>
+            <div class="led" id="led17"></div>
+            <div class="led" id="led18"></div>
+            <div class="led" id="led19"></div>
+            <div class="led" id="led20"></div>
+            <div class="led" id="led21"></div>
+            <div class="led" id="led22"></div>
+            <div class="led" id="led23"></div>
+            <div class="led" id="led24"></div>
+            <div class="led" id="led25"></div>
+            <div class="led" id="led26"></div>
+            <div class="led" id="led27"></div>
+            <div class="led" id="led28"></div>
+            <div class="led" id="led29"></div>
+            <div class="led" id="led30"></div>
+            <div class="led" id="led31"></div>
+            <div class="led" id="led32"></div>
+            <div class="led" id="led33"></div>
+            <div class="led" id="led34"></div>
+            <div class="led" id="led35"></div>
+            <div class="led" id="led36"></div>
+            <div class="led" id="led37"></div>
+            <div class="led" id="led38"></div>
+            <div class="led" id="led39"></div>
+            <div class="led" id="led40"></div>
+            <div class="led" id="led41"></div>
+            <div class="led" id="led42"></div>
+            <div class="led" id="led43"></div>
+            <div class="led" id="led44"></div>
+            <div class="led" id="led45"></div>
+            <div class="led" id="led46"></div>
+            <div class="led" id="led47"></div>
+            <div class="led" id="led48"></div>
+            <div class="led" id="led49"></div>
+            <div class="led" id="led50"></div>
+            <div class="led" id="led51"></div>
+            <div class="led" id="led52"></div>
+            <div class="led" id="led53"></div>
+            <div class="led" id="led54"></div>
+            <div class="led" id="led55"></div>
+            <div class="led" id="led56"></div>
+            <div class="led" id="led57"></div>
+            <div class="led" id="led58"></div>
+            <div class="led" id="led59"></div>
+            <div class="led" id="led60"></div>
+            <div class="led" id="led61"></div>
+            <div class="led" id="led62"></div>
+            <div class="led" id="led63"></div>
+            <div class="led" id="led64"></div>
         </section>
         <div class="right-side">
             <aside class="aside">
@@ -100,7 +104,7 @@
                     <button class="reset-button" id="reset-button">Resetear</button>
                 </div>
             </aside>
-            <aside class="form-enviar">
+            <aside class="form-enviar" id="form-enviar">
                 <form id="enviar-config">
                     <h2>Enviar configuración de los leds</h2>
                     <input type="submit" class="enviar" id="boton-enviar">
