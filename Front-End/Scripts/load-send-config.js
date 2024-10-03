@@ -18,10 +18,12 @@ window.onload = function() {
 
 const btn_enviar = document.getElementById('boton-enviar');
 btn_enviar.addEventListener('click', sendMessage);
-function sendMessage() {
-    let input = colores;
+
+function sendMessage(event) {
+    event.preventDefault();
+    let input = colores[perfil];
     if (ws.readyState === WebSocket.OPEN) {
-        ws.send(input.JSON.stringify());
+        ws.send(JSON.stringify(input));
     } else {
         console.log("WebSocket is not connected.");
     }
