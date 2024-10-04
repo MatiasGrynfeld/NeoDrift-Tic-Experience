@@ -3,11 +3,9 @@ let listeners = {};
 cambiarPerfil(perfil);
 
 function cambiarPerfil(id) {
-    console.log(id);
     perfil = parseInt(id);
     activateLabel(perfil);
     const leds = document.getElementsByClassName('led');
-    
     for (let i = 0; i < leds.length; i++) {
         leds[i].style.backgroundColor = colores[perfil][leds[i].id];
     }

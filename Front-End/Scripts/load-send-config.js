@@ -22,11 +22,8 @@ btn_enviar.addEventListener('click', sendMessage);
 function sendMessage(event) {
     event.preventDefault();
     let input = colores[perfil];
-    console.log(input);
     if (ws.readyState === WebSocket.OPEN) {
-        console.log("Se puede mandar")
         ws.send(JSON.stringify(input));
-        console.log("Mensaje enviado");
     } else {
         console.log("WebSocket is not connected.");
     }
